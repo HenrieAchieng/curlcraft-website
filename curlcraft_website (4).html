@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CurlCraft – African Hair Care</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  img { max-width: 100%; height: auto; display: block; }
+
+  :root {
+    --brown-deep: #3B1F0E;
+    --brown-mid: #6B3A20;
+    --brown-warm: #A0522D;
+    --brown-light: #C8845A;
+    --brown-pale: #E8C9A8;
+    --cream: #FAF3E8;
+    --cream-dark: #F0E0C5;
+    --gold: #D4A847;
+    --text-dark: #2A1205;
+    --text-mid: #5C3317;
+    --white: #FFFEF9;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.7;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    background: var(--brown-deep);
+    padding: 0 2.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  }
+
+  .logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--brown-pale);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+
+  .logo span { color: var(--gold); }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav ul a {
+    color: var(--brown-pale);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  nav ul a:hover { color: var(--gold); }
+
+  /* ─── HERO ─── */
+  .home {
+    background: linear-gradient(135deg, var(--brown-deep) 0%, var(--brown-mid) 50%, var(--brown-warm) 100%);
+    padding: 6rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .home::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: rgba(212,168,71,0.12);
+    pointer-events: none;
+  }
+
+  .home::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -40px;
+    width: 250px; height: 250px;
+    border-radius: 50%;
+    background: rgba(200,132,90,0.10);
+    pointer-events: none;
+  }
+
+  .home-badge {
+    display: inline-block;
+    background: rgba(212,168,71,0.2);
+    color: var(--gold);
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(212,168,71,0.4);
+    margin-bottom: 1.8rem;
+  }
+
+  .home h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.4rem;
+    color: var(--white);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.3rem;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .home p {
+    color: var(--brown-pale);
+    font-size: 1.1rem;
+    max-width: 560px;
+    margin: 0 auto 2.5rem;
+    font-weight: 300;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--brown-deep);
+    padding: 14px 36px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    transition: transform 0.2s, background 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: var(--brown-pale);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--brown-pale);
+    padding: 13px 32px;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: 1.5px solid rgba(232,201,168,0.5);
+    margin-left: 1rem;
+    display: inline-block;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 5rem 2.5rem; }
+
+  .section-label {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--brown-warm);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3rem;
+    color: var(--gold-deep);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .section-sub {
+    color: var(--text-mid);
+    max-width: 580px;
+    font-size: 1rem;
+  }
+
+  .section-header { margin-bottom: 3rem; }
+  /* ─── IMAGE PLACEHOLDERS ─── */
+  .img-placeholder {
+    width: 100%;
+    background: var(--cream-dark);
+    border: 2px dashed var(--brown-light);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--brown-warm);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    gap: 6px;
+    overflow: hidden;
+  }
+  .img-placeholder span { font-size: 2rem; }
+  .img-placeholder img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .home-img-wrap { max-width: 500px; margin: 2.5rem auto 0; }
+  .home-img-wrap .img-placeholder { height: 280px; border-color: rgba(212,168,71,0.4); background: rgba(255,255,255,0.07); color: var(--brown-pale); }
+
+  .about-img-wrap .img-placeholder { height: 320px; border-color: rgba(232,201,168,0.3); background: rgba(255,255,255,0.05); color: var(--brown-pale); }
+
+  .hair-card-img { height: 160px; margin: -1.8rem -1.4rem 1.2rem -1.4rem; border-radius: 14px 14px 0 0; border-left: none; border-right: none; border-top: none; }
+
+  .routine-img-wrap .img-placeholder { height: 240px; margin-bottom: 1.5rem; }
+
+  /* ─── HAIR TYPES ─── */
+  #hair-types { background: var(--white); }
+
+  .hair-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .hair-card {
+    background: var(--cream);
+    border-radius: 16px;
+    padding: 1.8rem 1.4rem;
+    border: 1.5px solid var(--cream-dark);
+    transition: transform 0.2s, border-color 0.2s;
+  }
+
+  .hair-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--brown-light);
+  }
+
+  .hair-icon {
+    width: 54px; height: 54px;
+    border-radius: 50%;
+    background: var(--brown-deep);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.1rem;
+    font-size: 1.5rem;
+    border: rounded solid var(--brown-light);
+  }
+
+  .hair-type-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--brown-deep);
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  .hair-type-name {
+    font-size: 0.78rem;
+    color: var(--brown-warm);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.7rem;
+  }
+
+  .hair-card p {
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+
+  /* ─── PRODUCTS ─── */
+  #products { background: var(--cream-dark); }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 900px) {
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 540px) {
+    .products-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ─── SERVICES OFFERED ─── */
+  #services-offered { background: var(--cream); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 900px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 540px) {
+    .services-grid { grid-template-columns: 1fr; }
+  }
+
+  .service-card {
+    background: linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%);
+    border-radius: 16px;
+    padding: 1.8rem 1.4rem;
+    color: var(--cream);
+    text-align: center;
+    border: 1px solid var(--brown-warm);
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 14px rgba(59,31,14,0.15);
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(59,31,14,0.28);
+  }
+
+  .service-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+
+  .service-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--brown-pale);
+    margin-bottom: 0.6rem;
+  }
+
+  .service-card p {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--cream-dark);
+  }
+
+  .product-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--cream-dark);
+    transition: transform 0.2s;
+  }
+
+  .product-card:hover { transform: translateY(-4px); }
+
+  .product-img {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+
+  .product-img.p1 { background: linear-gradient(135deg, #8B4513, #A0522D); }
+  .product-img.p2 { background: linear-gradient(135deg, #5D3A1A, #8B6914); }
+  .product-img.p3 { background: linear-gradient(135deg, #4A2508, #7A4020); }
+  .product-img.p4 { background: linear-gradient(135deg, #6B3A20, #C8845A); }
+
+  .product-body { padding: 1.3rem 1.5rem; }
+
+  .product-tag {
+    display: inline-block;
+    background: var(--cream-dark);
+    color: var(--brown-warm);
+    font-size: 0.72rem;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+
+  .product-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--brown-deep);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  .product-body p {
+    font-size: 0.84rem;
+    color: var(--text-mid);
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+
+  .product-price {
+    font-weight: 700;
+    color: var(--brown-warm);
+    font-size: 1.05rem;
+  }
+
+  /* ─── ROUTINE ─── */
+  #routine { background: var(--white); }
+
+  .routine-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .routine-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .routine-step {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    background: var(--white);
+    padding: 1.4rem;
+    border-radius: 16px;
+    border-left: 4px solid var(--brown-warm);
+  }
+
+  .step-num {
+    background: var(--brown-deep);
+    color: var(--gold);
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .step-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--brown-deep);
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  .step-content p {
+    font-size: 0.88rem;
+    color: var(--text-mid);
+  }
+
+  /* ─── ABOUT ─── */
+  #about {
+    background: var(--brown-deep);
+    color: var(--white);
+  }
+
+  .about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .about-text p {
+    color: var(--white);
+    margin-bottom: 1.2rem;
+    font-weight: 300;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+  .stat-box {
+    background: rgba(255,255,255,0.07);
+    border-radius: 14px;
+    padding: 1.5rem;
+    border: 1px solid rgba(232,201,168,0.15);
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--gold);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.82rem;
+    color: var(--brown-pale);
+    opacity: 0.8;
+  }
+  #routine{ background: var(--white-pale);
+  }
+ .routine-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: start;
+  } 
+   .routine-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .routine-step {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    background: var(--brown-pale);
+    padding: 1.4rem;
+    border-radius: 14px;
+    border-left: 10px solid var(--brown-warm);
+  }
+  /* ─── CONTACT ─── */
+  #contact { background: var(--cream-dark); }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--brown-deep);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .contact-info p {
+    color: var(--text-mid);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+    color: var(--text-mid);
+    font-size: 0.9rem;
+  }
+
+  .contact-icon {
+    width: 38px; height: 38px;
+    background: var(--brown-deep);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .contact-form {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 2.2rem;
+    border: 1px solid var(--cream-dark);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-group { margin-bottom: 1.2rem; }
+
+  .form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--brown-mid);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid var(--cream-dark);
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.92rem;
+    color: var(--text-dark);
+    background: var(--cream);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--brown-warm);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 110px; }
+
+  .form-submit {
+    width: 100%;
+    background: var(--brown-deep);
+    color: var(--gold);
+    border: none;
+    padding: 14px;
+    border-radius: 30px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .form-submit:hover {
+    background: var(--brown-mid);
+    transform: translateY(-2px);
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  #testimonials { background: var(--white); }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+  }
+
+  .testimonial-card {
+    background: var(--cream);
+    border-radius: 16px;
+    padding: 2rem 1.8rem;
+    border: 1.5px solid var(--cream-dark);
+    transition: transform 0.2s, border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--brown-light);
+  }
+
+  .testimonial-stars {
+    color: var(--gold);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-quote {
+    color: var(--text-mid);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .testimonial-avatar {
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: var(--brown-deep);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .testimonial-name {
+    font-weight: 700;
+    color: var(--brown-deep);
+    font-size: 0.95rem;
+  }
+
+  .testimonial-type {
+    font-size: 0.8rem;
+    color: var(--brown-warm);
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: #1A0A03;
+    padding: 3.5rem 2.5rem 2rem;
+    color: var(--brown-pale);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.88rem;
+    opacity: 0.7;
+    margin-top: 0.9rem;
+    max-width: 260px;
+    line-height: 1.65;
+  }
+
+  .footer-col h4 {
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 1.1rem;
+  }
+
+  .footer-col ul { list-style: none; }
+
+  .footer-col ul li {
+    margin-bottom: 0.55rem;
+    font-size: 0.88rem;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .footer-col ul li:hover { opacity: 1; }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(232,201,168,0.1);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    opacity: 0.5;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    .home h1 { font-size: 2.2rem; }
+    .btn-secondary { margin-left: 0; margin-top: 0.8rem; display: block; text-align: center; }
+    .about-layout,
+    .contact-layout,
+    .routine-layout,
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    nav ul { gap: 1rem; }
+    nav ul a { font-size: 0.78rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 480px) {
+    nav ul { display: none; }
+    .home { padding: 4rem 1.5rem; }
+    section { padding: 3.5rem 1.5rem; }
+    .section-title { font-size: 1.8rem; }
+    .footer-grid { grid-template-columns: 1fr; }
+  
+  }
+  .footer-social .fa-whatsapp{ color: #25D366; }
+.footer-social .fa-tiktok { color: #000000;}
+.footer-social .fa-instagram{ color: #E1306C;
+   }
+.footer-social .fa-linkedin-in { color: #0A66C2; 
+ }
+ .footer-social {
+  font-size: 1.8rem;
+  margin-right: 1.2rem;
+  display:flex;
+  flex-direction: row;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.2s, background 0.2s;
+}
+
+  .home {
+  background: linear-gradient(rgba(160, 77, 25, 0.75), rgba(59,31,14,0.75)), 
+              url('Brown afro.jpg') center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 110;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--brown-pale);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--brown-deep);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    z-index: 105;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+  }
+  .hair-grid{
+    background: linear-gradient(rgba(160, 77, 25, 0.75), rgba(59,31,14,0.75)), url('curls.jpg') center/cover no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 3rem 1.5rem;
+  }
+  .routine-layout{
+    background: linear-gradient(rgba(27, 12, 2, 0.75), rgba(59,31,14,0.75));
+  }
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     HEADER / NAVIGATION
+════════════════════════════════════════ -->
+
+<nav class="navbar">
+  <div class="logo">CurlCraft Hair Affair</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+<!-- ══════════════════════════════════════
+      HOME
+════════════════════════════════════════ -->
+<section class="home" id="home">
+  <div class="home-badge">✦ Made for African Hair, by African Women ✦
+
+  </div><br>
+  <h1>Your curls deserve to be <em>celebrated</em>, not tamed</h1>
+  <p>Real education, real products, and real routines designed for Black women's natural hair from 4A coils to 3C waves.</p>
+  <a href="#hair-types" class="btn-primary">Discover Your Hair Type</a>
+  <a href="#products" class="btn-secondary">Shop CurlCraft</a>
+</section>
+
+<!-- ══════════════════════════════════════
+     ABOUT US
+════════════════════════════════════════ -->
+<section id="about">
+  <div class="section-header">
+    <div class="about-text">
+      <div class="section-label" style="color:var(--gold)">Our Story</div>
+      <div class="section-title" style="color:var(--brown-pale)">Born from love for our natural hair</div>
+      <p>CurlCraft started because we were tired of seeing African hair treated as a problem to be solved. Our curls, coils, and kinks are not difficult — they've just been underserved.</p>
+      <p>We believe every Black woman in Nairobi and beyond deserves to walk into a space that truly understands her hair the science, the culture, and the joy of it.</p>
+      <p>Every product we make is tested on type 3C to 4C hair. Every piece of education we share is rooted in real research and real experience. No gatekeeping, no shame just knowledge and good products.</p>
+      <a href="#contact" class="btn-primary" style="margin-top:1.2rem; display:inline-block; font-size:0.9rem;">Get in Touch</a>
+    </div>
+<div class="about-layout"><img src="afro.jpg" alt="About CurlCraft" style="bottom: 200px;left: 200px; width: 500px; height: 500px; border-radius: 200%; object-fit: cover;
+  z-index: 999;">
+    <div class="about-stats">
+      <div class="stat-box">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Hair types covered, 3C to 4C</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Natural, African-sourced ingredients</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Sulphates, parabens, or mineral oil</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">✦</div>
+        <div class="stat-label">Nairobi-made, with love</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-header">
+    <div class="section-label">Services Offered</div>
+    <div class="section-title">Customized Hair Care Solutions</div>
+    <p class="section-sub">We offer personalized consultations and tailored hair care routines to meet your unique needs. Here's what we teach you.</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon"><img src="afro.jpg" alt="Know Your Texture" width="120" height="120"></span>
+      <div class="service-title">Know Your Texture</div>
+      <p>Understanding your unique hair type and texture as the foundation for every product and routine decision.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon"><img src="product.png" alt="Right Products"></span>
+      <div class="service-title">Right Products</div>
+      <p>Choosing the right products for your specific hair needs, porosity, and goals — no guesswork, no waste.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon"><img src="pr.jpg" alt="Personalized Routine" width="120" height="120"></span>
+      <div class="service-title">Personalized Routine</div>
+      <p>Creating a hair care routine tailored to your lifestyle, schedule, and the results you actually want.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon"><img src="ty.jpg" alt="Healthy Growth" width="120" height="120"></span>
+      <div class="service-title">Healthy Growth</div>
+      <p>Maintaining healthy hair growth through consistent care, protective styling, and scalp health habits.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HAIR TYPES EDUCATION
+  ════════════════════════════════════════ -->
+  <div id="hair-types" style="margin-top:4rem;">
+    <div class="section-header">
+      <div class="section-label">Know Your Texture</div>
+      <div class="section-title">Understanding African Hair Types</div>
+      <p class="section-sub">Your hair type is the foundation of everything knowing it means better products, better routines, and healthier hair.</p>
+    </div>
+
+    <div class="hair-grid">
+      <div class="hair-card">
+        <div class="hair-icon"><img src="3cc.jpg" alt="3C" width="300" height="300"></div>
+        <div class="hair-type-label">Type 3C</div>
+        <div class="hair-type-name">Tight Curls</div>
+        <p>Dense, springy corkscrew curls with lots of volume. Prone to dryness needs moisture-first products and gentle detangling.</p>
+      </div>
+      <div class="hair-card">
+        <div class="hair-icon"><img src="4a.jpg" alt="4A" width="300" height="300"></div>
+        <div class="hair-type-label">Type 4A</div>
+        <div class="hair-type-name">Coily S-Pattern</div>
+        <p>Defined S-shaped coils with very high moisture needs. Shrinks a lot but stretches beautifully. Thrives with the LOC method.</p>
+      </div>
+      <div class="hair-card">
+        <div class="hair-icon"><img src="4b.jpg" alt="4B" width="300" height="300"></div>
+        <div class="hair-type-label">Type 4B</div>
+        <div class="hair-type-name">Z-Pattern Coils</div>
+        <p>Sharp Z-shaped bends with less defined pattern. High shrinkage, very fragile at the bends sealing in moisture is key.</p>
+      </div>
+      <div class="hair-card">
+        <div class="hair-icon"><img src="4c.jpg" alt="4C" width="300" height="300"></div>
+        <div class="hair-type-label">Type 4C</div>
+        <div class="hair-type-name">Tight Zigzag</div>
+        <p>The tightest coil pattern, most common in African hair. Enormous shrinkage, densest texture — the crown of crowns. Requires deep conditioning weekly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       CURLCRAFT PRODUCTS
+  ════════════════════════════════════════ -->
+  <div id="products" style="margin-top:4rem;">
+    <div class="section-header">
+      <div class="section-label">CurlCraft Products</div>
+      <div class="section-title">Formulated for African Hair</div>
+      <p class="section-sub">Every CurlCraft product is designed with textured, African hair at the centre — no watered-down formulas here.</p>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-img p1"><img src="conditioner.png" alt="Deep Moisture Shea Butter Conditioner" width="300" height="300"></div>
+        <div class="product-body">
+          <span class="product-tag">Bestseller</span>
+          <div class="product-name">Deep Moisture Shea Butter Conditioner</div>
+          <p>Intense 30-minute deep conditioning treatment with raw shea, baobab oil, and black seed. Restores moisture to 4B and 4C hair.</p>
+          <div class="product-price">Ksh 1,200</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img p2"><img src="leave-in.png" alt="Aloe & Castor Leave-In Cream" width="300" height="300"></div>
+        <div class="product-body">
+          <span class="product-tag">Hydration</span>
+          <div class="product-name">Aloe &amp; Castor Leave-In Cream</div>
+          <p>Lightweight daily leave-in that locks in moisture without buildup. Perfect for the 'L' in your LOC method.</p>
+          <div class="product-price">Ksh 950</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img p3"><img src="flx.png" alt="Flaxseed & Peppermint Scalp Mask" width="300" height="300"></div>
+        <div class="product-body">
+          <span class="product-tag">Detangling And length retention</span>
+          <div class="product-name">Flaxseed &amp; Peppermint Scalp Mask</div>
+          <p>Peppermint, rosemary, and Jamaican black castor oil to stimulate growth and soothe scalp irritation. Use 2x weekly.</p>
+          <div class="product-price">Ksh 1,050</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img p4"><img src="mask.png" alt="Shampoo" width="300" height="300"></div>
+        <div class="product-body">
+          <span class="product-tag">Cleanser</span>
+          <div class="product-name">Shampoo</div>
+          <p>Gentle co-wash formula that cleanses without stripping natural oils. Keeps your curl pattern defined and frizz-free.</p>
+          <div class="product-price">Ksh 800</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HEALTHY HAIR ROUTINE
+  ════════════════════════════════════════ -->
+  <div id="routine" style="margin-top:4rem;">
+    <div class="routine-layout">
+
+      <div>
+        <div class="section-label">Healthy Hair Education</div>
+        <div class="section-title" style="color: var(--gold-warm);">Build Your Healthy Hair Routine</div>
+        <p class="section-sub" style="margin-bottom:2rem; color: var(--white);">A consistent routine is the single biggest thing you can do for your hair. Here's the CurlCraft foundational weekly routine for 4A–4C hair.</p>
+        <a href="#contact" class="btn-primary" style="font-size:0.9rem; padding:12px 30px;">Get a Personalised Routine</a>
+      </div>
+      <div class="routine-steps">
+        <div class="routine-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>Pre-poo with flaxseed oil</h3>
+            <p>Apply our Scalp Nourishment flaxseed oil Blend to detangle your hair 10-20 mins before washing. This helps to soften the hair and make it easier to detangle.Rinse out after 10-20 mins</p>
+          </div>
+
+          <img src="flaxseed.png" alt="Pre-poo with Flaxseed Oil" width="300px" height="300px" style="border-radius:12px; object-fit:cover; margin-top:0.5rem;">
+        </div>
+        <div class="routine-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>shampoo</h3>
+            <p>Use our Shampoo to cleanse your hair and remove buildup.Massage gently to open the cuticles. Scalp massage is your best friend it stimulates growth and removes buildup without breakage.</p>
+          </div>
+          <img src="sp.jpg" alt="Shampoo" width="70px" height="70px" style="border-radius:12px; object-fit:cover; margin-top:0.5rem;">
+        </div>
+        <div class="routine-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>Deep condition</h3>
+            <p>Apply the Shea Butter conditioner from root to tip. Sit under a hooded dryer or wrap in a warm towel for 30 minutes. This is non-negotiable for type 4 hair.</p>
+          </div>
+          <img src="conditioner.jpg" alt="Deep Condition" width="70px" height="70px" style="border-radius:12px; object-fit:cover; margin: top 0.5em;">
+          
+        </div>
+        <div class="routine-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h3>LOC or LCO method</h3>
+            <p>Seal in all that moisture: Liquid (water or aloe mist), our Leave-In Cream, then a sealing Oil. This is what keeps 4C hair moisturised all week.</p>
+          </div>
+          <img src="loc.jpg" alt="LOC Method" width="130px" height="130px" style="border-radius:12px; object-fit:cover; margin-top:0.5rem;">
+        </div>
+        
+        <div class="routine-step">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <h3>Protect &amp; sleep right</h3>
+            <p>Satin bonnet or pillowcase every single night. Pineapple your hair or do a loose twist-out to protect your curl pattern while you sleep.</p>
+          </div>
+          <img src="download.jpg" alt="Protect & Sleep Right" width="130px" height="130px" style="border-radius:12px; object-fit:cover; margin-top:0.5rem;">
+        </div>
+      
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CLIENT TESTIMONIALS
+════════════════════════════════════════ -->
+<section id="testimonials">
+  <div class="section-header">
+    <div class="section-label">Real Words, Real Curls</div>
+    <div class="section-title">What Our Clients Are Saying</div>
+    <p class="section-sub">Don't just take our word for it here's what women across Nairobi are saying about their hair journey with CurlCraft.</p>
+  </div>
+
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-quote">"My 4C hair has never felt this moisturised. The Shea Butter Mask alone changed my whole wash day routine — no more dry, brittle ends."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">A</div>
+        <div>
+          <div class="testimonial-name">Amara Wanjiru</div>
+          <div class="testimonial-type">Type 4C · Nairobi</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-quote">"I finally understand my hair type after years of guessing. The LOC method routine they recommended has cut my breakage down so much."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">N</div>
+        <div>
+          <div class="testimonial-name">Njeri Kamau</div>
+          <div class="testimonial-type">Type 4A · Nairobi</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-quote">"CurlCraft doesn't talk down to you like other natural hair brands. The education content alone is worth it, and the leave-in cream is a holy grail."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">F</div>
+        <div>
+          <div class="testimonial-name">Faith Odera</div>
+          <div class="testimonial-type">Type 3C · Nairobi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CONTACT
+════════════════════════════════════════ -->
+<section id="contact">
+  <div class="contact-layout">
+    <div class="contact-info">
+      <div class="section-label">Reach Us</div>
+      <div class="section-title">We'd love to hear from you</div>
+      <p>Have questions about your hair type, our products, or want a personalised routine? We're here — no question is too basic.</p>
+      <div class="contact-detail">
+        <div class="contact-icon">📍</div>
+        <span>Nairobi, Kenya</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">📧</div>
+        <span>hello@curlcraft.co.ke</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">📱</div>
+        <span>+254 700 000 000</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">⏰</div>
+        <span>Mon – Sat, 8am – 6pm EAT</span>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <div style="margin-bottom:1.5rem;">
+        <div style="font-family:'Playfair Display',serif; font-size:1.25rem; color:var(--brown-deep); font-weight:600; margin-bottom:0.3rem;">Send us a message</div>
+        <div style="font-size:0.85rem; color:var(--text-mid);">We reply within 24 hours.</div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="Amara">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Ochieng">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="you@example.com">
+      </div>
+      <div class="form-group">
+        <label>What's your hair type?</label>
+        <select>
+          <option value="">Select your type</option>
+          <option>Type 3C – Tight Curls</option>
+          <option>Type 4A – Coily S-Pattern</option>
+          <option>Type 4B – Z-Pattern Coils</option>
+          <option>Type 4C – Tight Zigzag</option>
+          <option>I'm not sure yet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Your Message</label>
+        <textarea placeholder="Tell us about your hair or ask anything…"></textarea>
+      </div>
+      <button class="form-submit" onclick="alert('Message sent! We\'ll be in touch within 24 hours. ✦')">Send Message ✦</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="font-size:1.4rem; color:var(--brown-pale);">Curl<span style="color:var(--gold)">Craft</span> ✦</div>
+      <p>Education-first African hair care. Real products for real curls, coils, and kinks — made in Nairobi with love.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Learn</h4>
+      <ul>
+        <li>Hair Types Guide</li>
+        <li>Weekly Routines</li>
+        <li>Ingredient Glossary</li>
+        <li>LOC Method Explained</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li>All Products</li>
+        <li>Starter Kits</li>
+        <li>Gift Sets</li>
+        
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li>About Us</li>
+        <li>Contact</li>
+        <li>Stockists in Nairobi</li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 CurlCraft Hair Affair. All rights reserved.</span>
+    <span>Made with love in Nairobi 🇰🇪</span>
+  
+    <div class="footer-social">
+      <a href="https://wa.me/254115058678" target="_blank" aria-label="contact us in WhatsApp" style="color:var(--brown-pale); margin-right:1rem;"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/henries_hair" target="_blank" aria-label="follow us on Instagram" style="color:var(--brown-pale); margin-right:1rem;"><i class="fab fa-instagram"></i></a>
+      <a href="https://tiktok.com/@henries_hair" target="_blank" aria-label="follow us on TikTok" style="color:var(--brown-pale);"><i class="fab fa-tiktok"></i> </a>
+      <a href="https://www.linkedin.com/company/Henrie Achieng" target="_blank" aria-label="connect with us on LinkedIn" style="color:var(--brown-pale); margin-left:1rem;"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:info@curlcraft.com" target="_blank" aria-label="email us" style="color:var(--brown-pale); margin-left:1rem;"><i class="fas fa-envelope"></i></a><br>
+      <a href="#top" style="font-size:0.9rem; margin-left:1rem; flex-direction: row; color:var(--gold-pale);">Back to Top</a>
+    
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('active');
+    navToggle.setAttribute('aria-expanded', isOpen);b
+    navToggle.classList.toggle('open');
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>
